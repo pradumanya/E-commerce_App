@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import {BrowserRouter, Route, Routes} from "react-router-dom"
+import { HashRouter,Route,Routes } from 'react-router-dom'
 import Shop from "./Pages/Shop"
 import ShopCategory from "./Pages/ShopCategory"
 import Product from "./Pages/Product"
@@ -16,7 +17,7 @@ function App() {
   return (
     <div>
     
-        <BrowserRouter> 
+        <HashRouter> 
           <Navbar/>
           <Routes>
             <Route path="/" element={<Shop/>}/>
@@ -29,7 +30,7 @@ function App() {
             <Route path="/login" element={<LoginSignup/>}/>
           </Routes>
           <Footer/>
-        </BrowserRouter>
+        </HashRouter>
     
     </div>
   )
